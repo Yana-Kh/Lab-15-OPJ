@@ -5,8 +5,9 @@ def sort_list(func):
     """
     Сортировка списка
     """
-    def wrapper(not_s_l):
-        sort_line = sorted(func(not_s_l))
+    def wrapper(*args):
+        arg = args[0]
+        sort_line = sorted(func(arg))
         return sort_line
     return wrapper
 
